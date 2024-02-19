@@ -564,7 +564,7 @@ class Chose_MPPTracking(MPPTracking, EntryData):
                 encoding = get_encoding(f)
 
             with archive.m_context.raw_file(self.data_file, encoding=encoding) as f:
-                from baseclasses.helper.file_parser.KIT_mpp_parser import get_mpp_data, get_mpp_archive
+                from .mpp_parser import get_mpp_data, get_mpp_archive
                 mpp_dict, data = get_mpp_data(f.name, encoding)
                 get_mpp_archive(mpp_dict, data, self)
         super(Chose_MPPTracking, self).normalize(archive, logger)
