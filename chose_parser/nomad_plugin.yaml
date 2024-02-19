@@ -1,0 +1,7 @@
+plugin_type: parser
+name: parsers/chose_parser
+description: |
+  This is a parser for Chose data.
+mainfile_name_re: ^(.+\.?.+\.((eqe|jv|jvi|pl|pli|chose|spv|uvvis)\..{1,4}))$
+parser_class_name: chose_parser.ChoseParser
+code_name: Chose code
